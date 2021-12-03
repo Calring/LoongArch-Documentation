@@ -693,7 +693,7 @@ Empty structures are ignored by C compilers which support them as a non-standard
 ... One double member. The argument is passed in a FAR; If no FAR is available, the value is passed in a GAR; If there is no available GAR, the value is passed on the stack.
 ... Two float members. The argument is passed in a pair of available FAR, with the low-order float member bits in the lower-numbered FAR and the high-order float member bits in the higher-numbered FAR. If the number of available FAR is less than 1, it’s passed in a GAR, and passed on the stack if there is no available GAR.
 
-.. The structure has both fixed-point and floating-point members, i.e. the structure has one float member and:
+.. The structure has both fixed-point and floating-point members, i.e. the structure has one float member and
 
 ... Multiple fixed-point members. If there are available GAR, the structure is passed in a GAR, and passed on the stack if there is no available GAR.
 
