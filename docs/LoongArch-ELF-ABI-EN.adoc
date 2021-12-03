@@ -645,7 +645,7 @@ In this document, *GRLEN* is the bit width of general-purpose register, *FRLEN* 
 
 === ABI LP64D
 
-that is, *GRLEN* = 64, *FRLEN* = 64
+that is, *GRLEN* = 64, *FRLEN* = 64.
 
 === C Datatypes and Alignment
 
@@ -674,7 +674,7 @@ There are three cases:
 
 . GRLEN < WOA ≤ 2 × GRLEN
 
-.. The argument is passed in a pair of GAR, with the low-order GRLEN bits in the lower-numbered register and the high-order GRLEN bits in the higher-numbered register.If exactly one register is available, the low-order GRLEN bits are passed in the register and the high-order GRLEN bits are passed on the stack. If no GAR is available, it’s passed on the stack.
+.. The argument is passed in a pair of GAR, with the low-order GRLEN bits in the lower-numbered register and the high-order GRLEN bits in the higher-numbered register. If exactly one register is available, the low-order GRLEN bits are passed in the register and the high-order GRLEN bits are passed on the stack. If no GAR is available, it’s passed on the stack.
 
 . WOA > 2 × GRLEN
 
@@ -761,13 +761,13 @@ Variadic arguments are passed in GAR. And after a variadic argument has been pas
 
 . WOA > 2 × GRLEN
 
-.. It’s passed by reference and are replaced in the argument list with the address.If there is an available GAR, the reference is passed in the GAR, and passed on the stack if no GAR is available
+.. It’s passed by reference and are replaced in the argument list with the address.If there is an available GAR, the reference is passed in the GAR, and passed on the stack if no GAR is available.
 
 === Return values
 
 . Generally speaking, `a0` and `a1` are used to return non floating-point values, and `fa0` and `fa1` are used to return floating-point values.
 . Values are returned in the same manner as a first named argument of the same type would be passed. If such an argument would have been passed by reference, the caller allocates memory for the return value, and passes the address as an implicit first argument.
-. The reference of the return value is returned that is stored in GAR `a0` if the size of the return value is larger than 2×GRLEN bits .
+. The reference of the return value is returned that is stored in GAR `a0` if the size of the return value is larger than 2×GRLEN bits.
 
 === Stack
 
