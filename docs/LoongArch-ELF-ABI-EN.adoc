@@ -703,11 +703,11 @@ Empty structures are ignored by C compilers which support them as a non-standard
 
 .. Only fixed-point members.
 
-The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
+... The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
 
 .. Only float-point members.
 
-i.e. The structure has one long double member or one double member and two adjacent float members or 3-4 float members.
+... i.e. The structure has one long double member or one double member and two adjacent float members or 3-4 float members.
 The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
 
 .. Both fixed-point and floating-point members.
@@ -716,15 +716,15 @@ The argument is passed in a pair of available GAR, with the low-order bits in th
 
 .... Only one fixed-point member.
 
-If one FAR and one GAR are available, the floating-point member of the structure is passed in the FAR, and the integer member of the structure is passed in the GAR; If no floating-point registers but two GARs are available, it’s passed in the two GARs; If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack; And it’s passed on the stack if no available GAR ;
+..... If one FAR and one GAR are available, the floating-point member of the structure is passed in the FAR, and the integer member of the structure is passed in the GAR; If no floating-point registers but two GARs are available, it’s passed in the two GARs; If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack; And it’s passed on the stack if no available GAR ;
 
 .... Multiple fixed-point members.
 
-The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
+..... The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
 
 ... The structure has float and fixed-point member.
 
-The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
+.... The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
 
 . WOA > 2 × GRLEN
 
