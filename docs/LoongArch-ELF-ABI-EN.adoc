@@ -702,11 +702,9 @@ Empty structures are ignored by C compilers which support them as a non-standard
 . GRLEN < WOA ≤ 2 × GRLEN
 
 .. Only fixed-point members.
-
 The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
 
 .. Only float-point members.
-
 i.e. The structure has one long double member or one double member and two adjacent float members or 3-4 float members.
 The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
 
