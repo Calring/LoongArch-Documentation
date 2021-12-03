@@ -707,8 +707,7 @@ Empty structures are ignored by C compilers which support them as a non-standard
 
 .. Only float-point members.
 
-... i.e. The structure has one long double member or one double member and two adjacent float members or 3-4 float members.
-The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
+... i.e. The structure has one long double member or one double member and two adjacent float members or 3-4 float members. The argument is passed in a pair of available GAR, with the low-order bits in the lower-numbered GAR and the high-order bits in the higher-numbered GAR. If the number of available GAR is 1, the low-order bits are in the GAR and the high-order bits are on the stack, and passed on the stack if there is no available GAR.
 
 .. Both fixed-point and floating-point members.
 
@@ -724,7 +723,7 @@ The argument is passed in a pair of available GAR, with the low-order bits in th
 
 . WOA > 2 × GRLEN
 
-.. It’s passed by reference and are replaced in the argument list with the address.If there is an available GAR, the reference is passed in the GAR, and passed on the stack if no GAR is available.
+.. It’s passed by reference and are replaced in the argument list with the address. If there is an available GAR, the reference is passed in the GAR, and passed on the stack if no GAR is available.
 
 Structure and scalars passed on the stack are aligned to the greater of the type alignment and GRLEN bits, but never more than the stack alignment.
 
@@ -742,7 +741,7 @@ Union is passed in GAR or stack.
 
 . WOA > 2 × GRLEN
 
-.. It’s passed by reference and are replaced in the argument list with the address.If there is an available GAR, the reference is passed in the GAR, and passed on the stack if no GAR is available.
+.. It’s passed by reference and are replaced in the argument list with the address. If there is an available GAR, the reference is passed in the GAR, and passed on the stack if no GAR is available.
 
 ==== Complex
 
